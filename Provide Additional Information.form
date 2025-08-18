@@ -1,0 +1,148 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "107b38b"
+  },
+  "schemaVersion": 19,
+  "id": "Form_AdditionalInformation",
+  "components": [
+    {
+      "text": "# Annual Leave Request\nPlease try to submit the information **at least one month** before the desired Start Date",
+      "type": "text",
+      "layout": {
+        "row": "Row_16q64xr",
+        "columns": null
+      },
+      "id": "Field_1a1gl14"
+    },
+    {
+      "text": "#### Employee information",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x13h21",
+        "columns": null
+      },
+      "id": "Field_1ykvzan"
+    },
+    {
+      "label": "Employee name:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_06eiev8",
+        "columns": null
+      },
+      "id": "Field_1xxlqcn",
+      "key": "employee",
+      "validate": {
+        "required": true
+      },
+      "readonly": false
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Strat Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_06eiev8",
+        "columns": null
+      },
+      "id": "Field_0uqxwoa",
+      "key": "startDate",
+      "validate": {
+        "required": true
+      },
+      "readonly": false
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_06eiev8",
+        "columns": null
+      },
+      "id": "Field_07iibky",
+      "key": "endDate",
+      "validate": {
+        "required": true
+      },
+      "readonly": false
+    },
+    {
+      "text": "#### Leave Type",
+      "type": "text",
+      "layout": {
+        "row": "Row_0l2kikl",
+        "columns": 11
+      },
+      "id": "Field_1vv4ize"
+    },
+    {
+      "label": "Leave Type",
+      "values": [
+        {
+          "label": "Vacation",
+          "value": "vacation"
+        },
+        {
+          "label": "Sick",
+          "value": "sick"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_116ghi4",
+        "columns": null
+      },
+      "id": "Field_1ptmi6f",
+      "key": "leaveType",
+      "validate": {
+        "required": true
+      },
+      "readonly": false
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0r2tz6p",
+        "columns": null
+      },
+      "id": "Field_0lswe5q",
+      "dataSource": "=justify_doc"
+    },
+    {
+      "label": "Medical certificate",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_08w3nrd",
+        "columns": null
+      },
+      "id": "Field_1ntf2co",
+      "key": "justify_doc",
+      "conditional": {
+        "hide": "=not(leaveType = \"sick\")"
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Comment",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09w7pcp",
+        "columns": null
+      },
+      "id": "Field_04secmq",
+      "key": "comment"
+    }
+  ],
+  "type": "default"
+}

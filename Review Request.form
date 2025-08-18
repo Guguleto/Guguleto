@@ -1,0 +1,151 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "107b38b"
+  },
+  "schemaVersion": 19,
+  "id": "Form_ReviewRequest",
+  "components": [
+    {
+      "text": "# Review Request\nReview the following Annual Leave request.",
+      "type": "text",
+      "layout": {
+        "row": "Row_16q64xr",
+        "columns": null
+      },
+      "id": "Field_1a1gl14"
+    },
+    {
+      "text": "#### Employee information",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x13h21",
+        "columns": null
+      },
+      "id": "Field_1ykvzan"
+    },
+    {
+      "label": "Employee name:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_06eiev8",
+        "columns": null
+      },
+      "id": "Field_1xxlqcn",
+      "key": "employee",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Strat Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_06eiev8",
+        "columns": null
+      },
+      "id": "Field_0uqxwoa",
+      "key": "startDate",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_06eiev8",
+        "columns": null
+      },
+      "id": "Field_07iibky",
+      "key": "endDate",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "text": "#### Leave Type",
+      "type": "text",
+      "layout": {
+        "row": "Row_0l2kikl",
+        "columns": 11
+      },
+      "id": "Field_1vv4ize"
+    },
+    {
+      "label": "Radio group",
+      "values": [
+        {
+          "label": "Vacation",
+          "value": "vacation"
+        },
+        {
+          "label": "Sick",
+          "value": "sick"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_04f1jx0",
+        "columns": null
+      },
+      "id": "Field_0nw4vu6",
+      "key": "radio_78i1c",
+      "validate": {
+        "required": false
+      },
+      "readonly": true
+    },
+    {
+      "label": "Comment",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09w7pcp",
+        "columns": null
+      },
+      "id": "Field_04secmq",
+      "key": "comment",
+      "readonly": true
+    },
+    {
+      "label": "Decision",
+      "values": [
+        {
+          "label": "Approved",
+          "value": "approved"
+        },
+        {
+          "label": "Rejected",
+          "value": "rejected"
+        },
+        {
+          "label": "Additional Information",
+          "value": "additional information"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_1pq7ry4",
+        "columns": null
+      },
+      "id": "Field_1agobr5",
+      "key": "decision",
+      "validate": {
+        "required": true
+      },
+      "defaultValue": "approved"
+    }
+  ],
+  "type": "default"
+}
